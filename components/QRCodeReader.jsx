@@ -3,6 +3,9 @@ import {QrReader} from 'react-qr-reader';
 
 function QRCodeReader() {
   const [result, setResult] = useState('');
+  const facingModeConstraints = {
+    facingMode: 'environment', // 'environment' for back camera, 'user' for front camera
+  };
 
   const handleScan = (data) => {
     if (data) {
@@ -20,6 +23,7 @@ function QRCodeReader() {
         delay={300}
         onError={handleError}
         onScan={handleScan}
+        constraints={facingModeConstraints}
         style={{ width: '100%' }}
       />
       {result && <p>QR Code Content: {result}</p>}
