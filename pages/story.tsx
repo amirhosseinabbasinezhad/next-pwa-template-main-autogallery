@@ -1,7 +1,8 @@
 import Page from '@/components/page'
 import Section from '@/components/section'
 
-import QRCodeScanner from "../components/QRCodeReader";
+//import QRCodeScanner from "../components/QRCodeReader";
+import QRCodeScanner from "../components/QRCodeScanner";
 const Story = () => (
 	<Page>
 		<Section>

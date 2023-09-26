@@ -19,27 +19,16 @@ function QRCodeScanner() {
 
 		let html5QrcodeScanner = new Html5QrcodeScanner(
 			'reader',
-			{ fps: 5, qrbox: { width: "80%", height: "80%" } }
-			/* verbose=  false*/
+			{ fps: 5, qrbox: { width: "80%", height: "80%" } },
+			 /*verbose=  false*/
 		)
         
 		html5QrcodeScanner.render(onScanSuccess, onScanFailure)
 	}, [])
-
-	const handleScan = (data) => {
-		if (data) {
-			setResult(data)
-		}
-	}
-
-	const handleError = (error) => {
-		console.error(error)
-	}
-
 	return (
 		<div>
-			<div id='reader' width='600px'></div>
-            {result}
+			
+            {result ? <button>{result}</button>  : <div id='reader' width='600px'></div>}
 		</div>
 	)
 }
