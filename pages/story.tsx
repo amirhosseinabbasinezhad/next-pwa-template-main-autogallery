@@ -1,7 +1,7 @@
 import Page from '@/components/page'
 import Section from '@/components/section'
 
-import QRCodeReader from "../components/QRCodeReader";
+import QRCodeScanner from "../components/QRCodeReader";
 const Story = () => (
 	<Page>
 		<Section>
@@ -23,7 +23,7 @@ const Story = () => (
 					, a two sentence story
 				</p>
 			</div>
-			<QRCodeReader />
+			<QRCodeScanner />
 		</Section>
 	</Page>
 )
