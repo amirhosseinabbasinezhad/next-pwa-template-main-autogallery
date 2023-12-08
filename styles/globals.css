@@ -10,3 +10,6 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 }
+.polygan {
+	border-radius:   125% 55px 8px 15%;
+}
