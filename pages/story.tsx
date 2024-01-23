@@ -35,11 +35,11 @@ const Story = () => {
 	<Page>
 		<Section>
 			<div className='grid grid-cols-2 gap-4 md:grid-cols-3 lg:xl:grid-cols-4 xl:xl:grid-cols-4'>
-				{carlist?.map((i)=>{
-					return <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"><CarCard car={i} /></div>
+				{carlist?.map((i,index)=>{
+					return <div key={index} data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"><CarCard car={i} /></div>
 				})}
-				{carlist?.map((i)=>{
-					return <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"><CarCard car={i} /></div>
+				{carlist?.map((i,index)=>{
+					return <div key={index} data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"><CarCard car={i} /></div>
 				})}
 				
 				</div>
