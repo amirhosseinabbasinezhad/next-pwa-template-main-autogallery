@@ -17,15 +17,15 @@ import { useEffect } from 'react';
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 const carlist =[
-	{model:"",speed:"",usageGas:"",isOutomat:false,img:img1},
-	{model:"",speed:"",usageGas:"",isOutomat:false,img:img2},
-	{model:"",speed:"",usageGas:"",isOutomat:false,img:img3},
-	{model:"",speed:"",usageGas:"",isOutomat:false,img:img4},
-	{model:"",speed:"",usageGas:"",isOutomat:false,img:img5},
-	{model:"",speed:"",usageGas:"",isOutomat:false,img:img6},
-	{model:"",speed:"",usageGas:"",isOutomat:false,img:img7},
-	{model:"",speed:"",usageGas:"",isOutomat:false,img:img8},
-	{model:"",speed:"",usageGas:"",isOutomat:false,img:img9},
+	{model:"1",speed:"",usageGas:"",isOutomat:false,img:img1},
+	{model:"2",speed:"",usageGas:"",isOutomat:false,img:img2},
+	{model:"3",speed:"",usageGas:"",isOutomat:false,img:img3},
+	{model:"4",speed:"",usageGas:"",isOutomat:false,img:img4},
+	{model:"5",speed:"",usageGas:"",isOutomat:false,img:img5},
+	{model:"6",speed:"",usageGas:"",isOutomat:false,img:img6},
+	{model:"7",speed:"",usageGas:"",isOutomat:false,img:img7},
+	{model:"8",speed:"",usageGas:"",isOutomat:false,img:img8},
+	{model:"9",speed:"",usageGas:"",isOutomat:false,img:img9},
 ]
 const Story = () => {
 	useEffect(()=>{
@@ -35,11 +35,11 @@ const Story = () => {
 	<Page>
 		<Section>
 			<div className='grid grid-cols-2 gap-4 md:grid-cols-3 lg:xl:grid-cols-4 xl:xl:grid-cols-4'>
-				{carlist?.map((i,index)=>{
-					return <div key={index} data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"><CarCard car={i} /></div>
+				{carlist?.map((i)=>{
+					return <div key={i.model} data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"><CarCard car={i} /></div>
 				})}
-				{carlist?.map((i,index)=>{
-					return <div key={index} data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"><CarCard car={i} /></div>
+				{carlist?.map((i)=>{
+					return <div key={i.model} data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"><CarCard car={i} /></div>
 				})}
 				
 				</div>
